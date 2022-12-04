@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kyu_kata_10</title>
+    <script>
+
+        // REVERSED SEQUENCE
+
+        //   DESCRIPTION:
+        //   Build a function that returns an array of integers from n to 1 where n>0.
+        // Example : n=5 --> [5,4,3,2,1]
+
+        // first edition
+        function reverseSeq(number) {
+            let result = [];
+            while (number > 0) {
+                result.push(number);
+                number--;
+            }
+            return result;
+        }
+
+        console.log(reverseSeq(10));  // [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+        // second edition
+        function reverseSeq2(number) {
+            let result = [];
+            for (let i = number; i > 0; i--) {
+                result.push(i);
+            }
+            return result;
+        }
+
+        console.log(reverseSeq2(10)); // [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+    </script>
+</head>
+<body>
+
+</body>
+</html>
