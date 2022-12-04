@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kyu_kata_09</title>
+    <script>
+
+        // SUM MIXED ARRAY
+
+        //   DESCRIPTION:
+        //   Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+        //   Return your answer as a number.
+
+
+        // first version:
+        let d = [10, "10", 10, "10", 10, 10, 15];  // 75
+
+        function summNumbers(x) {
+            let result = 0;
+            for (let i = 0; i < x.length; i++) {
+                if (typeof x[i] === "string") {
+                    result += Number(x[i]);
+                } else {
+                    result += x[i];
+                }
+            }
+            return result;
+        }
+
+        console.log(summNumbers(d));  // 50
+
+
+        // second version:
+        function summNumbers2(y) {
+            let result = 0;
+            for (let i = 0; i < y.length; i++) {
+                result += Number(y[i]);
+            }
+            return result;
+        }
+
+        console.log(summNumbers2(d));  // 75
+    </script>
+</head>
+<body>
+
+</body>
+</html>
