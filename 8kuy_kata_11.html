@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_11</title>
+    <script>
+
+        // OPPOSITES ATTRACT
+
+        //   DESCRIPTION:
+        /*   Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each.
+             If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
+             Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't. */
+
+        // first version:
+        function loveFunc(flower1, flower2) {
+            return (flower1 + flower2) % 2 !== 0
+        }
+
+        console.log(loveFunc(10, 10));   // false
+        console.log(loveFunc(11, 11));   // false
+        console.log(loveFunc(10, 11));   // true
+
+
+        // second version:
+        function loveFunc2(flower1, flower2) {
+            return flower1 % 2 !== flower2 % 2;
+        }
+
+        console.log(loveFunc2(10, 10));   // false
+        console.log(loveFunc2(11, 11));   // false
+        console.log(loveFunc2(10, 11));   // true
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
