@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_12</title>
+    <script>
+
+        // CONVERT A NUMBER TO A STRING!
+
+        //   DESCRIPTION:
+        /*   We need a function that can transform a number (integer) into a string.
+             What ways of achieving this do you know?
+             Examples (input --> output):
+                                          123  --> "123"
+                                          999  --> "999"
+                                          -100 --> "-100"
+                                                                  */
+
+        // first version:
+        function numberToString(num) {
+            return String(num);
+        }
+        let abc = 55;
+        console.log(typeof (abc));                // number
+        console.log(typeof (numberToString(55))); // string
+
+
+        // second version:
+        function numberToString2(num) {
+            return num.toString();
+        }
+        console.log(typeof (abc));                 // number
+        console.log(typeof (numberToString2(55))); // string
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
