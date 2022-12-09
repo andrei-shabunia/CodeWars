@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7kyu_kata_01</title>
+    <script>
+        // VOWEL COUNT
+
+        // DESCRIPTION:
+        /* Return the number (count) of vowels in the given string.
+           We will consider a, e, i, o, u as vowels for this Kata (but not y).
+           The input string will only consist of lower case letters and/or spaces. */
+
+        // first version
+        function getCount(str) {
+            let vowels = 0;
+            str = str.toLowerCase();
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === "a") {
+                    vowels += 1;
+                }
+                if (str[i] === "e") {
+                    vowels += 1;
+                }
+                if (str[i] === "i") {
+                    vowels += 1;
+                }
+                if (str[i] === "o") {
+                    vowels += 1;
+                }
+                if (str[i] === "u") {
+                    vowels += 1;
+                }
+            }
+            return vowels;
+        }
+
+        console.log(getCount("America"));
+
+        // second version
+        function getCount2(str) {
+            let vowelsCount = 0;
+            let vowels = ["a", "e", "i", "o", "u"];
+            for (let i = 0; i < str.length; i++) {
+                for (let j = 0; j < vowels.length; j++) {
+                    if (str[i] === vowels[j]) {
+                        vowelsCount++;
+                    }
+                }
+            }
+            return vowelsCount;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
