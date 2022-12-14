@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5kyu_kata_01</title>
+    <script>
+        // MOVING ZEROS TO THE END
+
+        // DESCRIPTION:
+        /* Write an algorithm that takes an array and moves all of the zeros to the end,
+           preserving the order of the other elements.
+
+           moveZeros([false,1,0,1,2,0,1,3,"a"]) // returns[false,1,1,2,1,3,"a",0,0]       */
+
+        // first edition:
+        function moveZeros(arr) {
+            let free = [];
+            let zero = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] !== 0) {
+                    free.push(arr[i]);
+                } else {
+                    zero.push(0);
+                }
+            }
+            return free.concat(zero);
+        }
+
+        let abc = [false, 1, 0, 1, 2, 0, 1, 3, "a"];
+        console.log(moveZeros(abc));
+
+        // second edition
+        let moveZeros2 = function (arr) {
+            return arr.filter(function (x) {
+                return x !== 0
+            }).concat(arr.filter(function (x) {
+                return x === 0;
+            }));
+        }
+
+        // third edition
+        let moveZeros3 = function (arr) {
+            for (let i = arr.length - 1; i >= 0; i--) {
+                if (arr[i] === 0) {
+                    arr.splice(i, 1);
+                    arr.push(0);
+                }
+            }
+            return arr;
+        }
+
+        // fourth edition
+        let moveZeros4 = function (arr) {
+            let filtedList = arr.filter(function (num) {
+                return num !== 0;
+            });
+            let zeroList = arr.filter(function (num) {
+                return num === 0;
+            });
+            return filtedList.concat(zeroList);
+        }
+
+        // fifth edition
+        let moveZeros5 = function (arr) {
+            return [
+                ...(arr.filter(n => n !== 0)),
+                ...(arr.filter(n => n === 0))
+            ];
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
