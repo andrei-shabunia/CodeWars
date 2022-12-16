@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7kyu_kata_03</title>
+    <script>
+        // SQUARE EVERY DIGIT
+
+        // DESCRIPTION:
+        /* Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+           For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+           Note: The function accepts an integer and returns an integer  */
+
+        // first version
+        function squareDigits(num) {
+            let square = [];
+            let numToString = String(num);
+            let arrNum = (numToString.split(""));
+            for (let i = 0; i < arrNum.length; i++) {
+                square.push(Math.pow(arrNum[i], 2));
+            }
+            return Number(square.join(""));
+        }
+
+        console.log(squareDigits(345)); // 91625
+
+
+        // second version
+        function squareDigits2(num) {
+            var string = num.toString();
+            var results = [];
+            for (var i = 0; i < string.length; i++) {
+                results[i] = string[i] * string[i];
+            }
+            return Number(results.join(''));
+        }
+
+        console.log(squareDigits2(345)); // 91625
+
+
+        // third version
+        function squareDigits3(num){
+            //may the code be with you
+            var numS = num.toString();
+            var output = "";
+            for (var i = 0; i < numS.length; i++) {
+                output += parseInt(numS[i]) * parseInt(numS[i]);
+            }
+            return parseInt(output);
+        }
+azSZEWSWSS
+        // fourth version
+
+        function squareDigits4(num){
+            var array = num.toString().split('').map( function(int) {
+                var i = parseInt(int);
+                return i * i;
+            });
+
+            return parseInt(array.join(""));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
