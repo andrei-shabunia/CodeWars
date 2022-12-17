@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_18</title>
+    <script>
+
+        // SQUARE(N) SUM
+
+        // DESCRIPTION:
+        /* Complete the square sum function so that it squares each number passed into it and then sums the results together.
+           For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9. */
+
+        // first version:
+        function squareSum(numbers) {
+            let result = 0;
+            for (let i = 0; i < numbers.length; i++) {
+                result += Math.pow(numbers[i], 2);
+            }
+            return result;
+        }
+
+        let abc = [1, 2, 2];
+        console.log(squareSum(abc)); // 9
+
+        // second version:
+        function squareSum2(numbers) {
+            return numbers.reduce(function (sum, n) {
+                return (n * n) + sum;
+            }, 0)
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
