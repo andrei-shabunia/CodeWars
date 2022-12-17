@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_19</title>
+    <script>
+
+        // GRASSHOPPER - SUMMATION
+
+        // DESCRIPTION:
+        /* Write a program that finds the summation of every number from 1 to num.
+           The number will always be a positive integer greater than 0.
+           For example:
+                        summation(2) -> 3
+                        1 + 2
+                        summation(8) -> 36
+                        1 + 2 + 3 + 4 + 5 + 6 + 7 + 8             */
+
+        // first version:
+        function summation(num) {
+            let summ = 0;
+            for (let i = 0; i <= num; i++) {
+                summ += i;
+            }
+            return summ;
+        }
+
+        console.log(summation(5)); // 15
+
+
+        // second version:
+        function summation2(num) {
+            return num * (num + 1) / 2
+        }
+
+        // third version:
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
