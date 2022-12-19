@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6kyu_kata_05</title>
+    <script>
+        // WHO LIKES IT?
+
+        // DESCRIPTION:
+        /* You probably know the "like" system from Facebook and other pages.
+           People can "like" blog posts, pictures or other items.
+           We want to create the text that should be displayed next to such an item.
+           Implement the function which takes an array containing the names of people that like an item.
+           It must return the display text as shown in the examples:
+
+                                []                                -->  "no one likes this"
+                                ["Peter"]                         -->  "Peter likes this"
+                                ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+                                ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+                                ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+           Note: For 4 or more names, the number in "and 2 others" simply increases.                          */
+
+        // first edition:
+        function countLike(words) {
+            if (words.length === 0) {
+                return "no one likes this";
+            }
+            if (words.length === 1) {
+                return words[0] + " likes this";
+            } else if (words.length === 2) {
+                return words[0] + " and " + words[1] + " like this";
+            } else if (words.length === 3) {
+                return words[0] + ", " + words[1] + " and " + words[2] + " like this";
+            } else if (words.length >= 4) {
+                return words[0] + ", " + words[1] + " and " + (words.length - 2) + " others like this";
+            }
+        }
+
+        let abc = [];
+        let abc2 = ["Peter"];
+        let abc3 = ["Jacob", "Alex"];
+        let abc4 = ["Max", "John", "Mark"];
+        let abc5 = ["Alex", "Jacob", "Mark", "Max", "Alex", "Jacob", "Mark", "Max", "Alex", "Jacob", "Mark", "Max"];
+        console.log(countLike(abc));  // no one likes this
+        console.log(countLike(abc2)); // Peter likes this
+        console.log(countLike(abc3)); // Jacob and Alex like this
+        console.log(countLike(abc4)); // Max, John and Mark like this
+        console.log(countLike(abc5)); // Alex, Jacob and 10 others like this
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
