@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7kuy_kata_08</title>
+    <script>
+
+        // LIST FILTERING
+
+        // DESCRIPTION:
+        /* In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+           Example:
+                     filter_list([1,2,'a','b']) == [1,2]
+                     filter_list([1,'a','b',0,15]) == [1,0,15]
+                     filter_list([1,2,'aasf','1','123',123]) == [1,2,123]       */
+
+        function filterList(str) {
+            let newStrings = [];
+            for (let i = 0; i < str.length; i++) {
+                if (typeof (str[i]) == "number") {
+                    newStrings.push(str[i]);
+                }
+            }
+            return newStrings;
+        }
+
+        let abc = [1, 2, "aasf", "1", "123", 123];
+        console.log(filterList(abc));      // [1, 2, 123]
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
