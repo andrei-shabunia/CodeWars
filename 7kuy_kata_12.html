@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7kyu_kata_12</title>
+    <script>
+        // EXES AND OHS
+
+        // DESCRIPTION:
+        /* Check to see if a string has the same amount of 'x's and 'o's.
+           The method must return a boolean and be case insensitive. The string can contain any char.
+           Examples input/output:
+
+                                      XO("ooxx") => true
+                                      XO("xooxx") => false
+                                      XO("ooxXm") => true
+                                      XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+                                      XO("zzoo") => false   */
+
+
+        // first edition:
+        function XO(str) {
+            let result = str.toLowerCase().split("");
+            let valueO = 0;
+            let valueX = 0;
+            for (let i = 0; i < result.length; i++) {
+                if (result[i] === "o") {
+                    valueO += 1;
+                } else if (result[i] === "x") {
+                    valueX += 1;
+                }
+            }
+            return valueO === valueX;
+        }
+
+        let abc = "1o2o3x3x"; // true
+        console.log(XO(abc));
+
+
+        // second version
+        function XO2(str) {
+            let x = str.match(/x/gi);
+            let o = str.match(/o/gi);
+            return (x && x.length) === (o && o.length);
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
