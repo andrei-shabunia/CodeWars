@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7kyu_kata_13</title>
+    <script>
+        // SHORTEST WORD
+
+        // DESCRIPTION:
+        /* Simple, given a string of words, return the length of the shortest word(s).
+           String will never be empty and you do not need to account for different data types.  */
+
+        // first edition:
+        function findShort(s) {
+            let words = s.split(" ");
+            let moreShort = words[0].length;
+            for (let i = 0; i < words.length; i++) {
+                if (words[i].length < moreShort) {
+                    moreShort = words[i].length;
+                }
+            }
+            return moreShort;
+        }
+
+        let abc = "bitcoin take over the world maybe who knows perhaps";
+        console.log(findShort(abc)); // 3
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
