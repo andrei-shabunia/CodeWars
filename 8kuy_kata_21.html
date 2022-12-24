@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_21</title>
+    <script>
+
+        // FIND THE SMALLEST INTEGER IN THE ARRAY
+
+        // DESCRIPTION:
+        /*  Given an array of integers your solution should find the smallest integer.
+            For example:
+                         Given [34, 15, 88, 2] your solution will return 2
+                         Given [34, -345, -1, 100] your solution will return -345
+            NOTE: You can assume, for the purpose of this kata, that the supplied array will not be empty.   */
+
+
+        // first version:
+        function smallestIntegerFinder(num) {
+            let minValue = num[0];
+            for (let i = 0; i < num.length; i++) {
+                if (num[i] < minValue) {
+                    minValue = num[i];
+                }
+            }
+            return minValue;
+        }
+
+        let abc = [78, 56, 232, 12, 8];
+        console.log(smallestIntegerFinder2(abc)); // 8
+
+
+        // second version:
+        function smallestIntegerFinder2(num) {
+            return Math.min.apply(null, num);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
