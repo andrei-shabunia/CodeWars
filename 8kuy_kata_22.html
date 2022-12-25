@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_22</title>
+    <script>
+
+        // COUNTING SHEEP...
+
+        // DESCRIPTION:
+        /*  Consider an array/list of sheep where some sheep may be missing from their place.
+            We need a function that counts the number of sheep present in the array (true means present).
+            For example:
+                         [true,  true,  true,  false, true,  true,  true,  true, true,  false, true,  false,
+                          true,  false, false, true, true,  true,  true,  true, false, false, true,  true]
+            The correct answer would be 17.
+            Hint: Don't forget to check for bad values like null/undefined          */
+
+
+        // first version:
+        function countSheeps(sheeps) {
+            let count = 0;
+            for (let i = 0; i < sheeps.length; i++) {
+                if (sheeps[i] === true) {
+                    count += 1;
+                }
+            }
+            return count;
+        }
+
+        let abc = [true, true, true, false, true, true, true, true, true, false, true, false,
+            true, false, false, true, true, true, true, true, false, false, true, true];
+        console.log(countSheeps(abc)); // 8
+
+
+        // second version:
+        function countSheeps2(arrayOfSheeps) {
+            return arrayOfSheeps.filter(Boolean).length;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
