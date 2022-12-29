@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_30</title>
+    <script>
+
+        // BEGINNER - LOST WITHOUT A MAP
+
+        // DESCRIPTION:
+        /* Given an array of integers, return a new array with each value doubled.
+           For example:
+                       [1, 2, 3] --> [2, 4, 6]                        */
+
+        // first version:
+        function doubleValue(arr) {
+            let doubleArr = [];
+            for (let i = 0; i < arr.length; i++) {
+                doubleArr.push(arr[i] * 2);
+            }
+            return doubleArr;
+        }
+
+        let abc = [1, 2, 3];
+        console.log(doubleValue(abc));
+
+
+        // second version:
+        function doubleValue2(x) {
+            return x.map(n => n * 2);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
