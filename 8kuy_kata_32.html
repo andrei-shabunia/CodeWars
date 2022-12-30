@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_32</title>
+    <script>
+
+        // BEGINNER SERIES #2 CLOCK
+
+        // DESCRIPTION:
+        /* Clock shows h hours, m minutes and s seconds after midnight.
+           Your task is to write a function which returns the time since midnight in milliseconds.
+           Example:
+                   h = 0
+                   m = 1
+                   s = 1
+                   result = 61000                       */
+
+        // first version:
+        function past(h, m, s) {
+            return h * 3600000 + m * 60000 + s * 1000;
+        }
+
+        console.log(past(0, 1, 1));
+
+
+        // second version:
+        function past2(h, m, s) {
+            return ((h * 3600) + (m * 60) + s) * 1000;
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
