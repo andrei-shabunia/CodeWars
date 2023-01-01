@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_36</title>
+    <script>
+
+        // REVERSED WORDS
+
+        // DESCRIPTION:
+        /* Complete the solution so that it reverses all of the words within the string passed in.
+           Example(Input --> Output):
+           "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"          */
+
+        // first version:
+        function reverseWords(arr) {
+            return arr.split(" ").reverse().join(" ");
+        }
+
+        let abc = "hello world!";
+        console.log(reverseWords(abc));
+
+
+        // second version
+        const invert = array => array.map(num => -num);
+
+
+        // third version
+        function invert2(array) {
+            return array.map(el => -el);
+        }
+
+        // fourth version
+        function invert3(array) {
+            for (let i = 0; i < array.length; i++) {
+                array[i] *= -1;
+            }
+            return array;
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
