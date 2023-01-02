@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_37</title>
+    <script>
+
+        // BEGINNER - REDUCE BUT GROW
+
+        // DESCRIPTION:
+        /* Given a non-empty array of integers, return the result of multiplying the values together in order.
+           Example:
+                    [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24         */
+
+        // first version:
+        function grow(arr) {
+            let result = 1;
+            for (let i = 0; i < arr.length; i++) {
+                result *= arr[i];
+            }
+            return result;
+        }
+
+        let abc = [1, 2, 3, 4];
+        console.log(grow(abc));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
