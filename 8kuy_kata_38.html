@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_38</title>
+    <script>
+
+        // SIMPLE MULTIPLICATION
+
+        // DESCRIPTION:
+        // This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+
+        // first version:
+        function simpleMultiplication(num) {
+            if (num % 2 === 0) {
+                return num * 8;
+            } else {
+                return num * 9;
+            }
+        }
+
+        console.log(simpleMultiplication(4));
+        console.log(simpleMultiplication(5));
+
+
+        // second version:
+        function simpleMultiplication2(n) {
+            return n * (n % 2 ? 9 : 8);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
