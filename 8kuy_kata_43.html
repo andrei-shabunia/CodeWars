@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_43</title>
+    <script>
+
+        // CALCULATE AVERAGE
+
+        // DESCRIPTION:
+        /* Write a function which calculates the average of the numbers in a given list.
+           Note: Empty arrays should return 0.                 */
+
+        // first version:
+        function findAverage(array) {
+            let result = 0;
+            for (let i = 0; i < array.length; i++) {
+                result += array[i];
+            }
+            if (array.length === 0) {
+                return 0;
+            } else {
+                return (result / array.length);
+            }
+        }
+
+        let abc = [];
+        console.log(findAverage(abc));
+
+        // second version
+        function findAverage2(array) {
+            if (array.length === 0) {
+                return 0;
+            }
+            let result = 0;
+            for (let i = 0; i < array.length; i++) {
+                result += array[i];
+            }
+            return result / array.length;
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
