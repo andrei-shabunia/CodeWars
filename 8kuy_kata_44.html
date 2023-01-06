@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_44</title>
+    <script>
+
+        // FAKE BINARY
+
+        // DESCRIPTION:
+        /* Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+           Note: input will never be an empty string                */
+
+        // first version:
+        function fakeBin(array) {
+            let result = array.split("");
+            for (let i = 0; i < result.length; i++) {
+                if (result[i] < 5) {
+                    result[i] = 0;
+                } else {
+                    result[i] = 1;
+                }
+            }
+            return result.join("");
+        }
+
+        let abc = "12345";
+        console.log(fakeBin(abc));
+
+
+        // second version:
+        function fakeBin2(str) {
+            var newStr = "";
+            for (var i = 0; i < str.length; i++) {
+                if (Number(str[i]) >= 5) {
+                    newStr += "1"
+                } else {
+                    newStr += "0";
+                }
+            }
+            return newStr;
+        }
+
+        // third version
+        function fakeBin3(x) {
+            return x.split('').map(n => n < 5 ? 0 : 1).join('');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
