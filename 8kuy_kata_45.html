@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_45</title>
+    <script>
+
+        // YOU ONLY NEED ONE - BEGINNER
+
+        // DESCRIPTION:
+        /* You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+           Array can contain numbers or strings. X can be either.
+           Return true if the array contains the value, false if not.               */
+
+        // first version:
+        function check(a, x) {
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] === x) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        let abc = [1, 5, "mbappe", 7];
+        console.log(check(abc, "mbappe")); // true
+
+        // second version
+        const check2 = (a, x) => a.includes(x);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
