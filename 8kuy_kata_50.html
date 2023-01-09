@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_50</title>
+    <script>
+
+        // IF YOU CAN'T SLEEP, JUST COUNT SHEEP!
+
+        // DESCRIPTION:
+        /* If you can't sleep, just count sheep!!
+           Task:
+           Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...".
+           Input will always be valid, i.e. no negative integers.          */
+
+        // first version:
+        function countSheep(num) {
+            let str = "";
+            for (let i = 1; i <= num; i++) {
+                str += i + " sheep...";
+            }
+            return str;
+        }
+
+        console.log(countSheep(1)); // 1 sheep...
+        console.log(countSheep(2)); // 1 sheep...2 sheep...
+        console.log(countSheep(3)); // 1 sheep...2 sheep...3 sheep...
+
+        // second version
+        const countSheep2 = num => {
+            let val = '';
+            for (let i = 1; i <= num; i++) {
+                val += `${i} sheep...`;
+            }
+            return val;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
