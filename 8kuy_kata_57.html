@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_57</title>
+    <script>
+
+        // REMOVE EXCLAMATION MARKS
+
+        // DESCRIPTION:
+        /* Write function RemoveExclamationMarks which removes all exclamation marks from a given string.  */
+
+        // first version:
+        function removeExclamationMarks(s) {
+            let newStr = s.split("");
+            let result = [];
+            for (let i = 0; i < newStr.length; i++) {
+                if (newStr[i] !== "!") {
+                    result.push(newStr[i]);
+                }
+            }
+            return result.join("");
+        }
+
+        let abc = "Hello world!";
+        console.log(removeExclamationMarks(abc));
+
+        // second version:
+        function removeExclamationMarks2(s) {
+            return s.replace(/!/gi, '');
+        }
+
+        // third version:
+        function removeExclamationMarks3(s) {
+            return s.split('!').join('');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
