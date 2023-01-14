@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_56</title>
+    <script>
+
+        // TOTAL AMOUNT OF POINTS
+
+        // DESCRIPTION:
+        /* Our football team has finished the championship.
+           Our team's match results are recorded in a collection of strings.
+           Each match is represented by a string in the format "x:y", where x is our team's score and y is our opponents score.
+           For example: ["3:1", "2:2", "0:1", ...]
+           Points are awarded for each match as follows:
+                                          if x > y: 3 points (win)
+                                          if x < y: 0 points (loss)
+                                          if x = y: 1 point (tie)
+           We need to write a function that takes this collection and returns the number of points our team (x) got in the championship by the rules given above.  */
+
+        // first version:
+        function points(games) {
+            let points = 0;
+            for (let i = 0; i < games.length; i++) {
+                let score = games[i].split(":");
+                if (score[0] > score[1]) {
+                    points += 3;
+                } else if (score[0] === score[1]) {
+                    points += 1;
+                } else {
+                    points += 0;
+                }
+            }
+            return points;
+        }
+
+        let results = ["1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:3"];
+        console.log(points(results));
+
+        // second version
+        function points2(games) {
+            let total = 0;
+            games.map(game => {
+                if (game[0] === game[2]) {
+                    total += 1;
+                } else if (game[0] > game[2]) {
+                    total += 3;
+                }
+            });
+            return total;
+        }
+
+        //third version
+        function points3(games) {
+            let sum = 0;
+            for (let i = 0; i < games.length; ++i) {
+                if (games[i][0] > games[i][2])
+                    sum += 3;
+                if (games[i][0] === games[i][2])
+                    sum += 1;
+            }
+            return sum;
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
