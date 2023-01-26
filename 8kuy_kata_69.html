@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_69</title>
+    <script>
+
+        // VOWEL REMOVER
+
+        // DESCRIPTION:
+        /* Create a function called shortcut to remove the lowercase vowels (a, e, i, o, u ) in a given string.
+           Examples:
+                    "hello"     -->  "hll"
+                    "codewars"  -->  "cdwrs"
+                    "goodbye"   -->  "gdby"
+                    "HELLO"     -->  "HELLO"
+                                            don't worry about uppercase vowels
+                                            y is not considered a vowel for this kata             */
+
+        // first version:
+        function remover(word) {
+            let result = [];
+            for (let i = 0; i < word.length; i++) {
+                if (word.toUpperCase() === word) {
+                    return word;
+                } else if (word[i] !== "a" && word[i] !== "e" && word[i] !== "i" && word[i] !== "o" && word[i] !== "u") {
+                    result.push(word[i]);
+                }
+            }
+            return result.join("");
+        }
+
+        console.log(remover("hello"));
+        console.log(remover("codewars"));
+        console.log(remover("HELLO"));
+
+        // second version:
+        function shortcut2(string) {
+            return string.replace(/[aeiou]/g, '')
+        }
+
+        // third version:
+        function shortcut3(str) {
+            return str.split('').filter(function (e) {
+                return ['a', 'e', 'i', 'o', 'u'].indexOf(e) === -1
+            }).join('')
+        }
+
+        // fourth version:
+        function shortcut4(string) {
+            return string
+                .split('')
+                .filter(str => !'aeiou'.includes(str))
+                .join('')
+        }
+
+        // fifth version;
+        function shortcut5(string) {
+            let vowels = "aeiou";
+            let output = "";
+            for (let i = 0; i < string.length; i++) {
+                if (!(vowels.indexOf(string[i]) > -1)) {
+                    output += string[i];
+                }
+            }
+            return output;
+        }
+
+        // six version:
+        function shortcut6(string) {
+            let vowels = 'aeiou';
+
+            let result = [];
+
+            for (let i = 0; i < string.length; i++) {
+                if (!vowels.includes(string[i])) {
+                    result.push(string[i]);
+                }
+            }
+            return result.join('');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
