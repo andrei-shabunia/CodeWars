@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_70</title>
+    <script>
+
+        // GRASSHOPPER - PERSONALIZED MESSAGE
+
+        // DESCRIPTION:
+        /* Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+           Use conditionals to return the proper message:
+           case	                    return
+           name equals owner	    'Hello boss'
+           otherwise	            'Hello guest'            */
+
+        // first version:
+        function greet(name, owner) {
+            return name === owner ? 'Hello boss' : 'Hello guest';
+        }
+
+
+        // second version:
+        function greet2(name, owner) {
+            return `Hello ${name === owner ? 'boss' : 'guest'}`
+        }
+
+        // third version:
+        function greet3(name, owner) {
+            if (name === owner) {
+                return 'Hello boss';
+            }
+            return 'Hello guest';
+        }
+
+        // fourth version:
+        const greet4 = (name, owner) => name === owner ? 'Hello boss' : 'Hello guest';
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
