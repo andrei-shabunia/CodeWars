@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_72</title>
+    <script>
+
+        // PARSE NICE INT FROM CHAR PROBLEM
+
+        // DESCRIPTION:
+        /* You ask a small girl,"How old are you?"
+           She always says, "x years old", where x is a random number between 0 and 9.
+
+           Write a program that returns the girl's age (0-9) as an integer.
+           Assume the test input string is always a valid string.
+           For example, the test input may be "1 year old" or "5 years old".
+           The first character in the string is always a number.          */
+
+
+        // first version:
+        function getAge(inputString) {
+            return parseInt(inputString);
+        }
+
+
+        // second version:
+        function getAge2(inputString) {
+            return +inputString[0];
+        }
+
+        // third version:
+        function getAge3(inputString) {
+            return Number(inputString[0]);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
