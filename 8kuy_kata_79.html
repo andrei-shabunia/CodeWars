@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_79</title>
+    <script>
+
+        // DOUBLE CHAR
+
+        // DESCRIPTION:
+        /* Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+           Examples (Input -> Output):
+                                        * "String"      -> "SSttrriinngg"
+                                        * "Hello World" -> "HHeelllloo  WWoorrlldd"
+                                        * "1234!_ "     -> "11223344!!__  "
+                                                            Good Luck!                 */
+
+
+        // first version:
+        function doubleChar(str) {
+            let result = [];
+            for (let i = 0; i < str.length; i++) {
+                result.push(str[i] + str[i]);
+            }
+            return result.join("");
+        }
+
+        console.log(doubleChar("String"));
+        console.log(doubleChar("Hello World"));
+        console.log(doubleChar("1234!_ "));
+
+        // second version:
+        const doubleChar2 = (str) => str.split("").map(c => c + c).join("");
+
+        // third version:
+        function doubleChar3(str) {
+            let word = '';
+            for (let i = 0; i < str.length; i++) {
+                word = word + str[i] + str[i];
+            }
+            return word;
+        }
+
+        // fourth version:
+        function doubleChar4(str) {
+            return str.replace(/(.)/g, "$1$1")
+        }
+
+        // fifth version:
+        function doubleChar5(str) {
+            return [...str].map(s => s.repeat(2)).join('')
+        }
+
+        // six version:
+        function doubleChar6(str) {
+            return [...str].map(v => v + v).join('');
+        }
+
+        // seventh version:
+        function doubleChar7(str) {
+            return [...str].map(x => x.concat(x)).join("");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
