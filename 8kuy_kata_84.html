@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_84</title>
+    <script>
+
+        // REMOVING ELEMENTS
+
+        // DESCRIPTION:
+        /* Take an array and remove every second element from the array.
+           Always keep the first element and start removing with the next element.
+           Example:
+                   ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+                   None of the arrays will be empty, so you don't have to worry about that!               */
+
+
+        // first version:
+        function removeEveryOther(arr) {
+            let result = [];
+            for (let i = 0; i < arr.length; i += 2) {
+                result.push(arr[i]);
+            }
+            return result;
+        }
+
+        let abc = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log(removeEveryOther(abc));
+
+        // second version:
+        function removeEveryOther2(arr) {
+            return arr.filter(function (elem, index) {
+                return index % 2 === 0;
+            });
+        }
+
+        // third version:
+        const removeEveryOther3 = arr => arr.filter((_, i) => !(i % 2));
+
+        // fourth version:
+        function removeEveryOther4(arr) {
+            //your code here
+            for (let i = 1; i < arr.length; i++) {
+                arr.splice(i, 1);
+            }
+            return arr;
+        }
+
+
+        // fifth version:
+        const removeEveryOther5 = arr => arr.filter((item, i) => i % 2 === 0);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
