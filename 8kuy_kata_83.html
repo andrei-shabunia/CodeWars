@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8kuy_kata_83</title>
+    <script>
+
+        // SORT AND STAR
+
+        // DESCRIPTION:
+        /* You will be given a list of strings.
+           You must sort it alphabetically (case-sensitive, and based on the ASCII values of the chars) and then return the first value.
+           The returned value must be a string, and have "***" between each of its letters.
+           You should not remove or add elements from/to the array.
+                                                                     */
+
+
+        // first version:
+        function twoSort(s) {
+            let word = s.sort()[0];
+            let result = "";
+            for (let i = 0; i < word.length; i++) {
+                result += word[i];
+                if (i !== word.length - 1) {
+                    result += "***";
+                }
+            }
+            return result;
+        }
+
+        let s = ["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"];
+        console.log(twoSort(s));
+
+        // second version:
+        function twoSort2(s) {
+            return s.sort()[0].split('').join('***');
+        }
+
+        // third version:
+        function twoSort3(s) {
+            s.sort();
+            return s[0].split('').join('***');
+        }
+
+        // fourth version:
+        twoSort4 = s => s.sort()[0].split('').join('***')
+
+        // fifth version:
+        function twoSort5(s) {
+            let last = s.sort()[0];
+            let a = last[0];
+            for (let i = 1; i < last.length; i++) {
+                a += "***" + last[i];
+            }
+            return a;
+        }
+
+        // sixth version:
+        const twoSort6 = s => [...s.sort()[0]].join('***');
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
